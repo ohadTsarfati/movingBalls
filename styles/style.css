@@ -1,0 +1,170 @@
+body{
+	margin: 0;
+}
+
+/*menu styling*/
+.menu{
+    animation: fadein 2.5s;
+    left: 50%;
+    top: 3%;
+    position: fixed;
+    width: 40%;
+    min-width: 420px;
+    max-width: 600px;
+    height: 120px;
+    /* Firefox */
+	-moz-animation: fadein 2.5s; 
+    -moz-transform: translate(-50%);
+    /* Opera */
+    -o-animation: fadein 2.5s; 
+    -o-trnasform: translate(-50%);
+    /* Safari and Chrome */
+    -webkit-animation: fadein 2.5s; 
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+/*fading in effect*/
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Firefox */
+@-moz-keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Opera */
+@-o-keyframes fadein { 
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*header styling*/
+h1 {
+    background-color: rgb(29, 29, 29);
+    color: rgb(252, 180, 21);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+    /*margin bottom in order to connect with the inner-menu border*/
+    margin-bottom: -5px;
+    box-sizing: border-box;
+}
+
+/*general classes for centering elements within other element*/
+.center-container:before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.center-element {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*inner menu styling*/
+.inner-menu{
+	height:100px;
+	border-left: 4px solid rgb(29, 29, 29);
+    border-bottom: 4px solid rgb(29, 29, 29);
+    border-right: 4px solid rgb(29, 29, 29);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.inner-menu input{
+	font-size: 18px;
+	border-radius: 5px;
+	margin-left: 5%;
+	width: 45%;
+	box-sizing: border-box;
+	padding: 5px;
+}
+/*removing the focus outline*/
+.inner-menu input:focus{
+	outline: none;
+}
+/*removing the number increase/decrease arrows*/
+.inner-menu input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/*button styling*/
+.button {
+	text-align: center;
+	text-transform: uppercase;
+	color:#444444;
+	font-family: arial;
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 600;
+	width: 30%;
+	margin-left: 10%;
+	cursor: pointer;
+	border-radius: 10px;
+	/* Old browsers */
+	background: #eeeeee; 
+	/* Firefox */
+	background: -moz-linear-gradient(top,  #eeeeee 15%, #c7c7c7 40%, #acacac 50%); 
+	/* Chrome, Safari */
+	background: -webkit-linear-gradient(top,  #eeeeee 15%,#c7c7c7 40%,#acacac 50%); 
+	/* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#acacac',GradientType=0 ); 
+	background: linear-gradient(to bottom,  #eeeeee 15%,#c7c7c7 40%,#acacac 50%);
+	-webkit-box-shadow: 1px 3px 0px 0px #323232, 0px 0px 1px 7px #c7c7c7, 0px 0px 0px 2px #ffffff, 0px 0px 1px 2px #2d2d2d;
+	-moz-box-shadow: 1px 3px 0px 0px #323232, 0px 0px 1px 7px #c7c7c7, 0px 0px 0px 2px #ffffff, 0px 0px 1px 2px #2d2d2d;
+	box-shadow: 1px 3px 0px 0px #323232, 0px 0px 1px 7px #c7c7c7, 0px 0px 0px 9px #ffffff, 0px 0px 1px 11px #2d2d2d;
+}
+.button:hover {
+	background: #acacac; 
+	/* Firefox */
+	background: -moz-linear-gradient(top, #acacac 25%, #c7c7c7 64%, #eeeeee 80%); 
+	/* Chrome, Safari */
+	background: -webkit-linear-gradient(top,  #acacac 15%,#c7c7c7 64%, #eeeeee 80%); 
+	/* IE6-80*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#acacac', endColorstr='#eeeeee',GradientType=0 ); 
+	background: linear-gradient(to bottom, #acacac 25%, #c7c7c7 64%, #eeeeee 80%);
+}
+/*adding the stars to the button*/
+.button:before, .button:after {
+	content: "\2605";
+  	color: #828282;
+  	font-size: 24px;
+}
+.button:before{
+	padding-right: 10%;
+}
+.button:after{
+	padding-left: 10%;
+}
+
+#canvas {
+	display: block;
+	overflow: hidden;
+}
