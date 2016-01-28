@@ -104,6 +104,8 @@ h1 {
 	width: 48%;
 	box-sizing: border-box;
 	padding: 5px;
+	background-color: transparent;
+	-moz-appearance:textfield;
 }
 
 @media screen and (min-width:1040px){
@@ -120,7 +122,6 @@ h1 {
 	-webkit-appearance: none;
 	margin: 0;
 }
-
 /*button styling*/
 .button {
 	text-align: center;

@@ -5,11 +5,14 @@ app.main = (function(){
 	// making sure that a negative number won't be applied
 	button.onclick = function () {
 		var requiredBallsNumber = parseInt(input.value);
-		if (requiredBallsNumber >= 0){
+		if (input.value === '') {
+			alert('Please enter a number');
+		} else if (requiredBallsNumber < 0) {
+			alert('Only positive amount of balls is allowed.\nPlease try again');
+		} else if (requiredBallsNumber >= 0) {
 			app.balls.updateBalls(input.value);	
-		}
-		else {
-			alert("Only positive amount of balls is allowed.\nPlease try again");
+		} else {
+			alert('An error has occured');	
 		}
 	}
 })();
