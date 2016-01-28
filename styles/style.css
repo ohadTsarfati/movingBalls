@@ -9,7 +9,7 @@ body{
     top: 3%;
     position: fixed;
     width: 40%;
-    min-width: 420px;
+    min-width: 353px;
     max-width: 600px;
     height: 120px;
     /* Firefox */
@@ -98,12 +98,18 @@ h1 {
 }
 
 .inner-menu input{
-	font-size: 18px;
+	font-size: 16px;
 	border-radius: 5px;
-	margin-left: 5%;
-	width: 45%;
+	margin-left: 2%;
+	width: 48%;
 	box-sizing: border-box;
 	padding: 5px;
+}
+
+@media screen and (min-width:1040px){
+	.inner-menu input{
+		font-size: 18px;
+	}
 }
 /*removing the focus outline*/
 .inner-menu input:focus{
@@ -121,8 +127,8 @@ h1 {
 	text-transform: uppercase;
 	color:#444444;
 	font-family: arial;
-	font-size: 20px;
-	line-height: 40px;
+	font-size: 18px;
+	line-height: 32px;
 	font-weight: 600;
 	width: 30%;
 	margin-left: 10%;
@@ -162,6 +168,13 @@ h1 {
 }
 .button:after{
 	padding-left: 10%;
+}
+
+@media screen and (min-width:1040px){
+	.button{	
+		font-size: 20px;
+		line-height: 40px;
+	}
 }
 
 #canvas {
